@@ -1,0 +1,12 @@
+WiFi_ONOFF,setWifiEnabled,enabled, 1, AppLable, 15
+RSSI,checkPollTimer, rssi, 6
+HOTSPOT,setWifiApEnabled,enabled,11, AppLable, 8
+HOTSPOT_STATE, handleWifiApStateChanged, state, 2
+HOTSPOT_STATE*CLIENT_CONNECTED, waitForHostapdEvent STR = AP-STA-CONNECTED, mac, 5
+HOTSPOT_STATE*CLIENT_DISCONNECTED, waitForHostapdEvent STR = AP-STA-DISCONNECTED, mac, 5
+AIRPLANE,ACTION_AIRPLANE_MODE_CHANGED, enabled, 3
+WiFi_STATE, NETWORK_STATE_CHANGED_ACTION [, state, 1
+WiFi_STATE*WiFi_CONNECTED, wlan0: CTRL-EVENT-CONNECTED, mac, 5
+WiFi_STATE*WiFi_DISCONNECTED, wlan0: CTRL-EVENT-DISCONNECTED, mac, 3, reason, 5
+WiFi_STATE*SCAN, wlan0: nl80211: Scan trigger
+LCD_ONOFF, ACTION_SCREEN, enabled, 0
